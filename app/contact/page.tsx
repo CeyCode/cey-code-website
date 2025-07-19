@@ -76,19 +76,19 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <Mail className="h-6 w-6 text-primary" />
-                  <Link href="mailto:info@ceycode.com" className="text-muted-foreground hover:underline">
-                    info@ceycode.com
+                  <Link href="mailto:ceycode.service@gmail.com" className="text-muted-foreground hover:underline">
+                    ceycode.service@gmail.com
                   </Link>
                 </div>
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <Phone className="h-6 w-6 text-primary" />
                   <Link href="tel:+94112345678" className="text-muted-foreground hover:underline">
                     +94 11 234 5678
                   </Link>
-                </div>
+                </div> */}
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-muted-foreground">123, Galle Road, Colombo 04, Sri Lanka</p>
+                  <p className="text-muted-foreground">Horana Road, Colombo 05, Sri Lanka</p>
                 </div>
               </div>
             </div>

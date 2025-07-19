@@ -42,7 +42,7 @@ export default function HomePage() {
                 </div>
               </div>
               <Image
-                src="/placeholder.svg?height=550&width=550"
+                src="/images/Remote-Work-Team-Austin-1-scaled.jpg"
                 width="550"
                 height="550"
                 alt="Hero Image"
@@ -152,7 +152,7 @@ export default function HomePage() {
               <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
+                    src="/images/images (2).jpeg"
                     width={100}
                     height={100}
                     alt="Team Member"
@@ -167,7 +167,7 @@ export default function HomePage() {
               <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
+                    src="/images/unnamed.jpg"
                     width={100}
                     height={100}
                     alt="Team Member"
@@ -181,13 +181,15 @@ export default function HomePage() {
               </Card>
               <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
+                  <div className="w-[100px] h-[100px] mx-auto mb-4 rounded-full overflow-hidden flex items-center justify-center bg-muted">
                   <Image
-                    src="/placeholder.svg?height=100&width=100"
+                    src="/images/istockphoto-1411195926-612x612.jpg"
                     width={100}
                     height={100}
                     alt="Team Member"
-                    className="rounded-full mx-auto mb-4"
+                    className="object-cover w-full h-full"
                   />
+                  </div>
                   <CardTitle className="text-xl font-bold">Project Management</CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground text-sm">

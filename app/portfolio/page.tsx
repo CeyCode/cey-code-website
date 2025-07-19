@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
@@ -5,59 +7,9 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Construction, Home, Mail, Code, Briefcase, Smartphone } from "lucide-react"
 
 export default function PortfolioPage() {
-  const projects = [
-    {
-      id: 1,
-      title: "E-commerce Platform Redesign",
-      description:
-        "A modern and responsive e-commerce website for a local retail business, focusing on improved user experience and conversion rates.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["Web Development", "UI/UX", "E-commerce"],
-    },
-    {
-      id: 2,
-      title: "Mobile Banking App",
-      description:
-        "Developed a secure and intuitive mobile banking application for a regional financial institution, enhancing customer access to services.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["Mobile App", "FinTech", "Security"],
-    },
-    {
-      id: 3,
-      title: "Healthcare Management System",
-      description:
-        "A comprehensive web-based system for managing patient records, appointments, and billing for a chain of clinics.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["Web Development", "Healthcare", "Database"],
-    },
-    {
-      id: 4,
-      title: "Logistics Tracking Dashboard",
-      description:
-        "Designed and implemented a real-time logistics tracking dashboard for a shipping company, improving operational efficiency.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["Data Visualization", "Logistics", "Dashboard"],
-    },
-    {
-      id: 5,
-      title: "Educational Portal Development",
-      description:
-        "Created an interactive online learning portal with course management and student progress tracking features.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["Web Development", "Education", "LMS"],
-    },
-    {
-      id: 6,
-      title: "Custom CRM Solution",
-      description:
-        "Built a tailored Customer Relationship Management (CRM) system to help a service-based business manage client interactions and sales pipelines.",
-      image: "/placeholder.svg?height=300&width=500",
-      tags: ["Custom Software", "CRM", "Business Solutions"],
-    },
-  ]
-
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <Header />
@@ -73,34 +25,121 @@ export default function PortfolioPage() {
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project) => (
-                <Card
-                  key={project.id}
-                  className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    width={500}
-                    height={300}
-                    alt={project.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <CardHeader>
-                    <CardTitle className="text-xl font-bold text-primary">{project.title}</CardTitle>
-                    <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, index) => (
-                        <Badge key={index} variant="secondary" className="bg-primary/10 text-primary">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="flex flex-col items-center justify-center space-y-8 text-center">
+              <Card className="w-full max-w-2xl p-8 shadow-lg">
+                <CardHeader className="space-y-6">
+                  <div className="mx-auto">
+                    <Construction className="h-24 w-24 text-primary" />
+                  </div>
+                  <CardTitle className="text-3xl font-bold text-primary">
+                    Portfolio Under Development
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <p className="text-muted-foreground text-lg">
+                    We're curating an impressive portfolio showcase that will highlight our best work,
+                    client success stories, and innovative solutions across various industries.
+                  </p>
+                  <p className="text-muted-foreground">
+                    Our portfolio will feature detailed case studies, project outcomes, and the technologies
+                    we've used to deliver exceptional results for our clients.
+                  </p>
+
+                  <div className="flex flex-col gap-4 min-[400px]:flex-row justify-center pt-6">
+                    <Link href="/">
+                      <Button className="inline-flex h-10 items-center justify-center rounded-md bg-primary text-primary-foreground px-8 text-sm font-medium shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                        <Home className="mr-2 h-4 w-4" />
+                        Back to Home
+                      </Button>
+                    </Link>
+                    <Link href="/contact">
+                      <Button
+                        variant="outline"
+                        className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-sm font-medium shadow-sm transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-primary"
+                      >
+                        <Mail className="mr-2 h-4 w-4" />
+                        Contact Us
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="w-full max-w-4xl">
+                <h2 className="text-2xl font-bold text-primary mb-8">Featured Project Categories</h2>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                  <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <CardHeader>
+                      <Code className="h-12 w-12 text-primary mx-auto mb-4" />
+                      <CardTitle className="text-lg font-bold text-primary">Web Applications</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground text-sm">
+                      Custom web applications built with modern frameworks, featuring responsive design and robust functionality.
+                    </CardContent>
+                  </Card>
+
+                  <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <CardHeader>
+                      <Smartphone className="h-12 w-12 text-primary mx-auto mb-4" />
+                      <CardTitle className="text-lg font-bold text-primary">Mobile Solutions</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground text-sm">
+                      Native and cross-platform mobile applications designed for optimal user experience and performance.
+                    </CardContent>
+                  </Card>
+
+                  <Card className="p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <CardHeader>
+                      <Briefcase className="h-12 w-12 text-primary mx-auto mb-4" />
+                      <CardTitle className="text-lg font-bold text-primary">Enterprise Systems</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground text-sm">
+                      Scalable enterprise solutions including CRM systems, inventory management, and business automation tools.
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div className="w-full max-w-4xl">
+                <h2 className="text-2xl font-bold text-primary mb-8">What You'll Find Here Soon</h2>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <Card className="p-6 shadow-lg">
+                    <CardHeader>
+                      <CardTitle className="text-lg font-bold text-primary">Detailed Case Studies</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground text-sm">
+                      In-depth analysis of our projects, including challenges faced, solutions implemented, and results achieved.
+                    </CardContent>
+                  </Card>
+
+                  <Card className="p-6 shadow-lg">
+                    <CardHeader>
+                      <CardTitle className="text-lg font-bold text-primary">Technology Stack</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground text-sm">
+                      Comprehensive overview of the technologies, frameworks, and tools we use in our development process.
+                    </CardContent>
+                  </Card>
+
+                  <Card className="p-6 shadow-lg">
+                    <CardHeader>
+                      <CardTitle className="text-lg font-bold text-primary">Client Testimonials</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground text-sm">
+                      Real feedback from our clients about their experience working with CeyCode and project outcomes.
+                    </CardContent>
+                  </Card>
+
+                  <Card className="p-6 shadow-lg">
+                    <CardHeader>
+                      <CardTitle className="text-lg font-bold text-primary">Live Demos</CardTitle>
+                    </CardHeader>
+                    <CardContent className="text-muted-foreground text-sm">
+                      Interactive demonstrations of our applications and systems for you to explore and experience firsthand.
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>
